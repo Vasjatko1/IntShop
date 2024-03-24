@@ -71,3 +71,5 @@ let inputCart = document.getElementById("cartFF");
 function addCartToForm(id) {
     inputCart.value += id + ",";
 }
+
+/**** */
