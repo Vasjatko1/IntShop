@@ -29,10 +29,14 @@
                 <ul class="left hide-on-med-and-down">
                     <li><a href="index.html">головна</a></li>
                     <li><a href="catalog.html">товари</a></li>
-                    <li class="active">
-                        <a href="#">контакти</a>
-                    </li>
+                    <li><a href="contacts.html">контакти</a></li>
+                    <li><a href="company.html">Інші проекти</a></li>
                 </ul>
+                <a
+                    class="waves-effect waves-light btn modal-trigger"
+                    href="#modal1"
+                    >Кошик</a
+                >
             </div>
         </nav>
 
@@ -62,7 +66,16 @@
                     actually. The 574 might be our unlikeliest icon.
                 </p>
                 <span>3400 грн</span>
-                <div class="button-buy">купити</div>
+                <div
+                    class="button-buy"
+                    data-id="574"
+                    data-name="574"
+                    data-price=" 3400грн"
+                    data-img='<img src="img/nb9.webp">'
+                    data-count="1"
+                >
+                    купити
+                </div>
             </div>
         </div>
         <ul class="collapsible">
@@ -188,8 +201,17 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!"
+                                <a
+                                    class="grey-text text-lighten-3"
+                                    href="contacts.html"
                                     >контакти</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="grey-text text-lighten-3"
+                                    href="company.html"
+                                    >Інші проекти</a
                                 >
                             </li>
                         </ul>
@@ -205,7 +227,21 @@
                 </div>
             </div>
         </footer>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Кошик</h4>
+                <p>Оформлення товару</p>
+            </div>
 
+            <a
+                href="#cart-close"
+                id="cart-close"
+                class="modal-close waves-effect waves-green btn-flat"
+                >закрити</a
+            >
+            <ul id="cart" class="cart-items"></ul>
+        </div>
         <script
             type="text/javascript"
             src="http://code.jquery.com/jquery-1.11.0.min.js"

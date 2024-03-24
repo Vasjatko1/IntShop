@@ -29,10 +29,16 @@
                 <ul class="left hide-on-med-and-down">
                     <li><a href="index.html">головна</a></li>
                     <li><a href="catalog.html">товари</a></li>
-                    <li class="active">
-                        <a href="#">контакти</a>
-                    </li>
+                    <li><a href="contacts.html">контакти</a></li>
+                    <li><a href="company.html">Інші проекти</a></li>
                 </ul>
+
+                <!-- Modal Trigger -->
+                <a
+                    class="cart-btn btn-floating btn-large waves-effect waves-light btn modal-trigger"
+                    href="#modal1"
+                    ><i class="material-icons">local_grocery_store</i></a
+                >
             </div>
         </nav>
 
@@ -59,7 +65,16 @@
                 <h2>NB Numeric Franky Villani 417</h2>
                 <p>The first pro model for skateboarder Franky Villani</p>
                 <span>2500 грн</span>
-                <div class="button-buy">купити</div>
+                <div
+                    class="button-buy"
+                    data-id="franky"
+                    data-name="NB Numeric Franky Villani 417"
+                    data-price=" 2500грн"
+                    data-img='<img src="img/slider-1.webp">'
+                    data-count="1"
+                >
+                    купити
+                </div>
             </div>
         </div>
         <ul class="collapsible">
@@ -192,8 +207,17 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!"
+                                <a
+                                    class="grey-text text-lighten-3"
+                                    href="contacts.html"
                                     >контакти</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="grey-text text-lighten-3"
+                                    href="company.html"
+                                    >Інші проекти</a
                                 >
                             </li>
                         </ul>
@@ -209,6 +233,45 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Кошик</h4>
+                <p>Оформлення товару</p>
+            </div>
+
+            <a
+                href="#cart-close"
+                id="cart-close"
+                class="modal-close waves-effect waves-green btn-flat"
+                >закрити</a
+            >
+            <ul id="cart" class="cart-items"></ul>
+            <div class="row">
+                <form
+                    id="ajax-contact-form"
+                    enctype="multipart/form-data"
+                    method="post"
+                >
+                    <div class="form-group">
+                        <label for="nameFF">Ім`я:</label>
+                        <input id="nameFF" name="nameFF" type="text" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="telFF">Телефон:</label>
+                        <input id="telFF" name="telFF" type="tel" required />
+                    </div>
+                    <div class="form-group cart-input">
+                        <label for="cartFF">Cart:</label>
+                        <input id="cartFF" name="cartFF" type="text" required />
+                    </div>
+                    <button class="btn" type="submit" id="submitFF">
+                        Відправити
+                    </button>
+                </form>
+            </div>
+        </div>
 
         <script
             type="text/javascript"

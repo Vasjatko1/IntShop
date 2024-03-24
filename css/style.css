@@ -372,3 +372,48 @@ iframe {
 .catalog-slider .img {
     width: 100%;
 }
+#cart-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#cart {
+    padding: 0 15px;
+}
+#cart li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#cart li img {
+    margin-right: 20px;
+    max-width: 200px;
+}
+.delete-items {
+    margin-left: 10px;
+    padding: 4px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+.cart-btn {
+    position: absolute;
+    top: 5px;
+    right: 76px;
+    background: rgb(42, 223, 6);
+}
+.cart-btn i {
+    background: rgb(42, 223, 183);
+}
+#ajax-contact-form {
+    max-width: 250px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.cart-input {
+    display: none;
+}
